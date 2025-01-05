@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={% static "CSS/table.css" %}>
+</head>
+<body>
+    <!-- <h2>This is my first template...</h2> -->
+     <!-- {{blogdata}} -->
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        {% for i in blogdata %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+        </tr>
+        {% endfor %}
+        <!-- <tr>
+            <td></td>
+            <td></td>
+        </tr> -->
+    </table>
+
+</body>
+</html>
